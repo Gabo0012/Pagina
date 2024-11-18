@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    background-color: black;
+    color: white;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.container{
+    max-width: 1200px;
+    margin:0 auto;
+}
+
+.header{
+    background-image: url(https://i.postimg.cc/RZ7jXHpc/Encabezado.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+}
+
+.menu.container{
+    position: fixed;
+    z-index: 1200;
+}
+
+.menu.container.active{
+    background: rgb(0, 6, 34);
+    border-radius:5px;
+}
+
+.menu.container.active .navbar a{
+    color: red;
+}
+
+.menu.container.active .navbar a:hover{
+    color: rgb(255, 255, 255);
+}
+
+.header-1 h1{
+    color:white;
+    font-size: 100px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    line-height: 80px;
+}
+
+.menu{
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+    font-size: 35px;
+}
+
+.inicio img {
+    width: 100px; 
+    height: auto;
+    display: block;
+}
+
+.inicio:hover {
+    transform: rotate(-10deg);
+}
+
+.menu .navbar ul li{
+    position: relative;
+    float:left;
+}
+
+.menu .navbar ul li a{
+    font-size: 22px;
+    padding: 20px;
+    color:white;
+    display: block;
+}
+
+.menu .navbar ul li a:hover{
+    color:red;
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono{
+    width: 25px;
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+.btn-1 {
+    display: inline-block;
+    padding: 7px 20px;
+    background-color: red;
+    color:white;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.btn-1:hover{
+    background-color: rgb(255, 255, 255);
+    color:rgb(255, 0, 0);
+    border: 1px solid red;
+    border-radius: 10px;
+}
+
+h2{
+    font-size:40px;
+    margin-bottom: 20px;
+}
+
+.text-container {
+    padding: 20px;
+    background-color: rgb(0, 0, 68);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.text {
+    color: white;
+    font-size: 30px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 0;
+    margin-top: 100px;
+    border-top: 1px solid rgba(255, 0, 0, 0.37);
+    align-items: center;
+}
+
+.footer ul{
+    display:flex;
+}
+
+.footer h3{
+    font-size: 30px;
+}
+
+.footer a{
+    color: white;
+    font-size: 20px;
+    margin-right: 20px;
+    display: block;
+}
+
+.footer a:hover{
+    color: red;
+}
+
+@media (max-width:991px){
+    .menu{
+        padding: 20px;
+    }
+
+    .menu label{
+        display:initial;
+    }
+
+    .menu .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: black;
+        display: none;
+    }
+
+    .menu .navbar ul li{
+        width: 100%;
+    }
+
+    .btn-1{
+        display: none;
+    }
+
+    #menu:checked ~ .navbar {
+        display: initial;
+    }
+
+    .header-content {
+        flex-direction: column;
+        padding: 100px 30px 30px 30px;
+    }
+    
+    .header-1 {
+        width: 100%;
+        align-items: center;
+    }
+
+    .text-container {
+        font-size: 14px;
+    }
+
+    .footer {
+        margin-top: 30px;
+        padding: 30px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer ul{
+        margin-top: 15px;
+        justify-content: center;
+    }
+}
